@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "PES WiFi AutoLogin",
+  "version": "4.0",
+  "description": "Auto login/logout for PES WiFi Captive Portal.",
+  "permissions": ["storage", "notifications", "alarms"],
+  "host_permissions": ["http://192.168.254.1:8090/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  }
+}

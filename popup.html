@@ -1,0 +1,184 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<style>
+body { width: 260px; font-family: Arial; padding: 10px; }
+input { width: 100%; padding: 6px; margin: 6px 0; }
+button { width: 100%; padding: 8px; margin-top: 6px; }
+label { display: flex; align-items: center; margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<h3>PES WiFi AutoLogin</h3>
+
+<input id="usn" placeholder="USN">
+<input id="pass" placeholder="Password" type="password">
+
+<button id="save">Save</button>
+
+<hr>
+
+<button id="loginBtn" style="background:#4CAF50;color:white;">Login</button>
+<button id="logoutBtn" style="background:#d9534f;color:white;">Logout</button>
+
+<hr>
+
+<label>
+  <input type="checkbox" id="toggle"> Enable AutoLogin
+</label>
+
+<script src="popup.js"></script>
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PES WiFi AutoLogin</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root{
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --accent: #2563eb;
+      --success: #16a34a;
+      --danger: #ef4444;
+      --border: #e6e9ee;
+      --radius: 12px;
+      --pad: 14px;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    html,body{
+      margin:0;
+      padding:0;
+      background:var(--bg);
+      color:#111;
+    }
+
+    .wrap{
+      width:340px;
+      padding:16px;
+      box-sizing:border-box;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:16px;
+      box-shadow: 0 6px 18px rgba(22,28,37,0.06);
+      border: 1px solid var(--border);
+    }
+
+    h1{
+      font-size:18px;
+      margin:0 0 16px 0;
+      color:#0f172a;
+      font-weight:700;
+      text-align:center;
+    }
+
+    label{
+      display:block;
+      font-size:13px;
+      color:var(--muted);
+      font-weight:600;
+      margin-bottom:6px;
+    }
+
+    input[type=text], input[type=password]{
+      width:100%;
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid var(--border);
+      background:#fff;
+      font-size:14px;
+      margin-bottom:12px;
+      outline:none;
+    }
+
+    .btn{
+      width:100%;
+      padding:10px 12px;
+      border-radius:10px;
+      font-weight:700;
+      font-size:14px;
+      cursor:pointer;
+      border:none;
+      margin-bottom:10px;
+    }
+
+    .btn-save{ background:#e5e7eb; color:#111; }
+    .btn-save:hover{ background:#d1d5db; }
+
+    .btn-login{ background:var(--success); color:white; }
+    .btn-login:hover{ filter:brightness(.95); }
+
+    .btn-logout{ background:var(--danger); color:white; }
+    .btn-logout:hover{ filter:brightness(.95); }
+
+    /* Checkbox toggle styling */
+    .toggle-row{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-top:5px;
+    }
+
+    /* Modern checkbox styling */
+    input[type="checkbox"]{
+      width:20px;
+      height:20px;
+      accent-color: var(--accent);
+      cursor:pointer;
+    }
+
+    .footer{
+      text-align:center;
+      font-size:12px;
+      margin-top:14px;
+      color:#777;
+    }
+
+    .footer span{
+      font-weight:700;
+      color:#0b1220;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <h1>PES WiFi AutoLogin</h1>
+
+    <div class="card">
+
+      <label for="usn">Username (USN)</label>
+      <input id="usn" type="text" placeholder="e.g. PES2UG24CS027">
+
+      <label for="pass">Password</label>
+      <input id="pass" type="password" placeholder="Enter password">
+
+      <button id="save" class="btn btn-save">Save</button>
+
+      <button id="loginBtn" class="btn btn-login">Login</button>
+      <button id="logoutBtn" class="btn btn-logout">Logout</button>
+
+      <div class="toggle-row">
+        <span style="font-size:14px; font-weight:600; color:#444;">Enable AutoLogin</span>
+        <input type="checkbox" id="toggle">
+      </div>
+
+    </div>
+
+    <div class="footer">
+      Created by <span>Adarsh Sharath</span>
+    </div>
+
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
